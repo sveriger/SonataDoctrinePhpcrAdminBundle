@@ -132,7 +132,9 @@ class ListBuilder implements ListBuilderInterface
 
             if ($fieldDescription->getMappingType() == ClassMetadata::MANY_TO_MANY) {
                 $fieldDescription->setTemplate('SonataAdminBundle:CRUD:list_orm_many_to_many.html.twig');
-            }
+            } else {
+$fieldDescription->setTemplate('SonataAdminBundle:CRUD:list_phpcr_one_to_one.html.twig');
+}
         }
 
         if ($fieldDescription->getMappingType() == ClassMetadata::MANY_TO_ONE) {
