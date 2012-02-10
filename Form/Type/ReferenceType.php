@@ -25,8 +25,8 @@ class ReferenceType extends AbstractType
 
     public function buildForm(FormBuilder $builder, array $options)
     {
-        $builder->setAttributes('widget', 'sonata_phpcr_reference');
-    {
+        $builder->setAttribute('widget', 'sonata_phpcr_reference');
+    }
 
     public function getParent(array $options)
     {
@@ -37,4 +37,42 @@ class ReferenceType extends AbstractType
     {
         return 'sonata_phpcr_reference';
     }
+
+    public function getDefaultOptions(array $options)
+    {
+        return array(
+            'modifiable'    => false,
+            'type'          => 'text',
+            'type_options'  => array()
+        );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function buildViewBottomUp(FormView $view, FormInterface $form)
+    {
+        $url = '';
+
+        $vars = $view->getVars();
+        $value = $vars['value'];
+
+        if ($value instanceof Article) {
+
+            if ($value instanceof \Doctrine\ODM\PHPCR\Proxy\Proxy) {
+                $class = get_parent_class($value);
+            } else {
+                $class = get_class($value);
+            }
+
+            $admin = $this->pool->getAdminByClass($class);
+            if ($admin) {
+                $url = $admin->generateUrl('edit', array('id' => $value->getPath()));
+            }
+        }
+
+        $view->set('url', $url);
+        $view->set('widget', $form->getAttribute('widget'));
+    }
+
 }
