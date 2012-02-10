@@ -53,22 +53,22 @@ class SonataDoctrinePHPCRAdminExtension extends Extension
                         'integer'                   => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
                         'decimal'                   => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
                         'identifier'                => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'node'                      => 'SonataDoctrinePHPCRAdminBundle:CRUD:list_node.html.twig'
+                        'node'                      => 'SonataDoctrinePHPCRAdminBundle:CRUD:list_node.html.twig',
                         'sonata_phpcr_reference'    => 'SonataDoctrinePHPCRAdminBundle:CRUD:list_phpcr_one_to_one_reference.html.twig'
                     ),
                     'show' => array(
-                        'array'        => 'SonataAdminBundle:CRUD:list_array.html.twig',
-                        'boolean'      => 'SonataAdminBundle:CRUD:list_boolean.html.twig',
-                        'date'         => 'SonataAdminBundle:CRUD:list_date.html.twig',
-                        'datetime'     => 'SonataAdminBundle:CRUD:list_datetime.html.twig',
-                        'text'         => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'string'       => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'smallint'     => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'bigint'       => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'integer'      => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'decimal'      => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'identifier'   => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
-                        'node'         => 'SonataDoctrinePHPCRAdminBundle:CRUD:list_node.html.twig'
+                        'array'                     => 'SonataAdminBundle:CRUD:show_array.html.twig',
+                        'boolean'                   => 'SonataAdminBundle:CRUD:show_boolean.html.twig',
+                        'date'                      => 'SonataAdminBundle:CRUD:show_date.html.twig',
+                        'datetime'                  => 'SonataAdminBundle:CRUD:show_datetime.html.twig',
+                        'text'                      => 'SonataAdminBundle:CRUD:base_show_field.html.twig',
+                        'string'                    => 'SonataAdminBundle:CRUD:base_show_field.html.twig',
+                        'smallint'                  => 'SonataAdminBundle:CRUD:base_show_field.html.twig',
+                        'bigint'                    => 'SonataAdminBundle:CRUD:base_show_field.html.twig',
+                        'integer'                   => 'SonataAdminBundle:CRUD:base_show_field.html.twig',
+                        'decimal'                   => 'SonataAdminBundle:CRUD:base_show_field.html.twig',
+                        'identifier'                => 'SonataAdminBundle:CRUD:base_show_field.html.twig',
+                        'node'                      => 'SonataDoctrinePHPCRAdminBundle:CRUD:show_node.html.twig',
                         'sonata_phpcr_reference'    => 'SonataDoctrinePHPCRAdminBundle:CRUD:show_phpcr_one_to_one_reference.html.twig'
                     )
                 )
