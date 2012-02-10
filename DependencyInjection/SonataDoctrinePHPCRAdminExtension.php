@@ -42,6 +42,21 @@ class SonataDoctrinePHPCRAdminExtension extends Extension
             'templates' => array(
                 'types' => array(
                     'list' => array(
+                        'array'                     => 'SonataAdminBundle:CRUD:list_array.html.twig',
+                        'boolean'                   => 'SonataAdminBundle:CRUD:list_boolean.html.twig',
+                        'date'                      => 'SonataAdminBundle:CRUD:list_date.html.twig',
+                        'datetime'                  => 'SonataAdminBundle:CRUD:list_datetime.html.twig',
+                        'text'                      => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
+                        'string'                    => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
+                        'smallint'                  => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
+                        'bigint'                    => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
+                        'integer'                   => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
+                        'decimal'                   => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
+                        'identifier'                => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
+                        'node'                      => 'SonataDoctrinePHPCRAdminBundle:CRUD:list_node.html.twig'
+                        'sonata_phpcr_reference'    => 'SonataDoctrinePHPCRAdminBundle:CRUD:list_phpcr_one_to_one_reference.html.twig'
+                    ),
+                    'show' => array(
                         'array'        => 'SonataAdminBundle:CRUD:list_array.html.twig',
                         'boolean'      => 'SonataAdminBundle:CRUD:list_boolean.html.twig',
                         'date'         => 'SonataAdminBundle:CRUD:list_date.html.twig',
@@ -54,6 +69,7 @@ class SonataDoctrinePHPCRAdminExtension extends Extension
                         'decimal'      => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
                         'identifier'   => 'SonataAdminBundle:CRUD:base_list_field.html.twig',
                         'node'         => 'SonataDoctrinePHPCRAdminBundle:CRUD:list_node.html.twig'
+                        'sonata_phpcr_reference'    => 'SonataDoctrinePHPCRAdminBundle:CRUD:show_phpcr_one_to_one_reference.html.twig'
                     )
                 )
             )
@@ -78,6 +94,7 @@ class SonataDoctrinePHPCRAdminExtension extends Extension
         $loader->load('doctrine_phpcr_filter_types.xml');
         $loader->load('route.xml');
         $loader->load('twig.xml');
+        $loader->load('doctrine_phpcr_types.xml');
 
         $configuration = new Configuration();
         $processor = new Processor();
