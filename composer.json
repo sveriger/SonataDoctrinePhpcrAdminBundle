@@ -22,7 +22,7 @@
         "symfony/framework-bundle": "2.1.*",
         "symfony/security-bundle": "2.1.*",
         "symfony/twig-bundle":"2.1.*",
-        "doctrine/phpcr-odm":"1.0.*",
+        "doctrine/phpcr-odm":"dev-fix_load_translated_fields",
         "doctrine/phpcr-bundle":"1.0.*",
         "symfony-cmf/tree-browser-bundle": "dev-master"
     },
